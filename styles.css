@@ -1,7 +1,5 @@
-/*  your css code here. If applicable */
 /* styles.css */
 
-/* Basic styling */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -31,7 +29,7 @@ nav li {
     margin: 0 10px;
 }
 
-#hamburger {
+.ham {
     display: none; /* Hide hamburger menu by default */
     background: none;
     border: none;
@@ -40,13 +38,16 @@ nav li {
     cursor: pointer;
 }
 
-/* Mobile view */
+.nav-sub {
+    display: flex;
+}
+
 @media (max-width: 768px) {
-    #hamburger {
+    .ham {
         display: block; /* Show hamburger menu on mobile */
     }
 
-    #menu {
+    .nav-sub {
         display: none; /* Hide menu links by default on mobile */
         position: absolute;
         top: 50px;
@@ -55,19 +56,20 @@ nav li {
         border-radius: 5px;
         width: 200px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        flex-direction: column;
     }
 
-    #menu.show {
-        display: block; /* Show menu links when hamburger is clicked */
+    .nav-sub.show {
+        display: flex; /* Show menu links when hamburger is clicked */
     }
 
-    #menu li {
+    .nav-sub li {
         margin: 0;
         padding: 10px;
         border-bottom: 1px solid #444;
     }
 
-    #menu li:last-child {
+    .nav-sub li:last-child {
         border-bottom: none;
     }
 }
