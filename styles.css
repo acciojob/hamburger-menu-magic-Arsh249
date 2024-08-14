@@ -1,1 +1,73 @@
 /*  your css code here. If applicable */
+/* styles.css */
+
+/* Basic styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+#hamburger {
+    display: none; /* Hide hamburger menu by default */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    #hamburger {
+        display: block; /* Show hamburger menu on mobile */
+    }
+
+    #menu {
+        display: none; /* Hide menu links by default on mobile */
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background-color: #333;
+        border-radius: 5px;
+        width: 200px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #menu.show {
+        display: block; /* Show menu links when hamburger is clicked */
+    }
+
+    #menu li {
+        margin: 0;
+        padding: 10px;
+        border-bottom: 1px solid #444;
+    }
+
+    #menu li:last-child {
+        border-bottom: none;
+    }
+}
